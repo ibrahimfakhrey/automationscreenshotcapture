@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capture Result</title>
+</head>
+<body>
+    <h1>{{ file_type }} Result</h1>
+    <img src="{{ url_for(folder, filename=file_name) }}" alt="Screenshot">
+    <h2>Analysis Results:</h2>
+    <pre>{{ analysis.extracted_text }}</pre>
+    <h3>Edges Detected:</h3>
+    <img src="{{ url_for('view_file', filename=analysis.edges_image) }}" alt="Edges Image">
+    <a href="/">Capture Another</a>
+</body>
+</html>
